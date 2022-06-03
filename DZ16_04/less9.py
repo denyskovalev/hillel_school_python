@@ -44,13 +44,29 @@
 # print(kate_function(2, 54))
 
 class Hero:
-    def __init__(self, value):
-        self.set_name(value)
+    def __init__(self, money):
+        self.money = money
 
-    def get_name(self):
-        return self.__name
+    def get_money(self):
+        return self.__money
 
-    def set_name(self, val):
-        self.__name = val
+    def set_money(self, value):
+        if value > 100:
+            self.__money = 10
+            print(111)
+        elif value < 0:
+            self.__money = 1
+            print(222)
+        else:
+            self.__money = value
+            print(333)
 
-    names = property(get_name, set_name)
+    money = property(get_money, set_money)
+
+
+me = Hero(-2)
+
+print(me.money)
+
+
+
