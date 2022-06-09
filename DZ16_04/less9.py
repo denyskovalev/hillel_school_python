@@ -44,15 +44,15 @@
 # print(kate_function(2, 54))
 
 class Hero:
-    def __init__(self, money):
-        self.money = money
+    def __init__(self):
+        self.money = 1222
 
     def get_money(self):
         return self.__money
 
     def set_money(self, value):
         if value > 100:
-            self.__money = 10
+            self.__money = 100
             print(111)
         elif value < 0:
             self.__money = 1
@@ -64,7 +64,7 @@ class Hero:
     money = property(get_money, set_money)
 
 
-me = Hero(-2)
+me = Hero()
 
 print(me.money)
 
